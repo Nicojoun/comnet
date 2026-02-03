@@ -1,0 +1,39 @@
+@import 'variables';
+@import 'variablesMedia'; 
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-left: $screen-padding;
+  padding-right: $screen-padding;
+
+  @media (max-width: $media-queries-mobile) {
+    padding-left: $media-screen-padding;
+    padding-right: $media-screen-padding;
+    gap: 20px;
+} 
+
+    &-banner {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/image/image_background_2.png');
+      }
+
+    &-collapse {
+        padding-left: 80px;
+        padding-right: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media (max-width: $media-queries-mobile) {
+            padding: 0;
+        }  
+    }      
+
+}
+
+
+
+ 
+
+

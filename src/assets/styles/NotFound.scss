@@ -1,0 +1,63 @@
+@import 'variables'; 
+@import 'variablesMedia'; 
+
+.notFound {
+    padding-left: $screen-padding;
+    padding-right: $screen-padding;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @media (max-width: $media-queries-mobile) {
+        padding-left: $media-screen-padding;
+        padding-right: $media-screen-padding;
+        gap: 75px;
+    }
+
+    &-404 {
+        color: $tertiary-color;
+        font: 700 288px $font-text;
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: $media-queries-mobile) {
+            font: 700 96px $font-text;
+        }
+
+    }
+
+    &-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+
+        @media (max-width: $media-queries-mobile) {
+            gap: 80px;
+        }
+
+    }
+
+    &-message {
+        font: 500 36px $font-text;
+        color: $tertiary-color;
+        display: flex;
+        text-align: center;
+
+        @media (max-width: $media-queries-mobile) {
+            font: 500 18px $font-text;
+        }
+
+    }
+
+    &-linkBackHome {
+        $font-notFound-backHome : 500 18px $font-text;
+        color: black;
+
+        @media (max-width: $media-queries-mobile) {
+            font: 500 14px $font-text;
+        }
+
+    }
+}

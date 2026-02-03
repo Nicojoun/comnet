@@ -1,0 +1,52 @@
+@import 'variables'; 
+@import 'variablesMedia';
+
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-left: $screen-padding;
+    padding-right: $screen-padding;
+
+    @media (max-width: $media-queries-mobile) {
+        gap: 10px;
+        padding-left: $media-screen-padding;
+        padding-right: $media-screen-padding;
+    }
+
+    &-banner { 
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../assets/image/image_background.png');
+    }
+
+    &-housing {
+    padding: 50px;
+    background-color:  $fourth-color;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    border-radius: 25px;
+    
+        @media (max-width: $media-queries-mobile) {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color:  white;
+            padding: 0;
+        }
+    
+    }
+
+    &-linkHousing {
+        text-decoration: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'variablesMedia'; 
+
+.host {
+    font: 700 14px $font-text;;
+    color: $secondary-color;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+
+    &-name {
+        font: 500 18px 'Montserrat';
+        color: $tertiary-color;
+        text-align: right;
+
+        @media (max-width: $media-queries-mobile) {
+            font: 500 12px 'Montserrat';
+        } 
+
+    }
+
+    &-image {
+        width: 64px;  
+        height: 64px; 
+        border-radius: 50%; 
+        object-fit: cover; 
+
+        @media (max-width: $media-queries-mobile) {
+            width: 32px;  
+            height: 32px; 
+        } 
+
+    }
+
+}

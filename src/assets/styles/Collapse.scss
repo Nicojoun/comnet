@@ -1,0 +1,65 @@
+@import 'variables';
+@import 'variablesMedia'; 
+
+.collapse {
+    color: $secondary-color;
+    font: 500 24px $font-text;;
+
+    @media (max-width: $media-queries-mobile) {
+        font: 700 13px $font-text;
+    } 
+
+    &-title {
+        background-color: $tertiary-color;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 10px;
+        border-radius: 5px;
+        padding-right: 20px;
+        cursor: pointer; // Ajoute un pointeur pour indiquer que c'est cliquable
+
+        @media (max-width: $media-queries-mobile) {
+            height: 30px;
+        }    
+
+    }
+
+    &-content {
+        background-color: $fourth-color;
+        overflow: hidden; // Cache le contenu qui dépasse
+        transition: max-height 0.6s ease, opacity 2s; // Transition fluide pour le déploiement du contenu
+        max-height: 0; // Hauteur initiale fermée
+        opacity: 0;
+    }
+
+    // Classe pour afficher le contenu
+    &-open {
+        max-height: 500px; // Hauteur maximum définie quand le contenu est ouvert
+        transition: max-height 0.3s ease; // Animation pour ouvrir doucement
+        opacity: 1;
+    }
+
+    &-text {
+        color: $primary-color;
+        font-size: 20px;
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-bottom: 5px;
+
+        @media (max-width: $media-queries-mobile) {
+            font-size: 10px;
+            font-weight: 600;
+        }   
+    }
+
+    // styles pour le chevron
+    &-chevron {
+        transition: transform 0.3s ease; // Transition fluide de la rotation
+    }
+
+    &-chevronRotate {
+        transform: rotate(-180deg); // Fait pivoter le chevron vers le bas
+    }
+}
