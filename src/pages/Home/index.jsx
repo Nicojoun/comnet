@@ -5,6 +5,7 @@ import '../../assets/styles/Home.scss';
 // import Card from '../../components/Card';  
 // import { Link } from 'react-router-dom'; 
 import Logo from '../../components/Logo';
+import Entrer from '../../components/Entrer';
 
 function Home() {
   return (
@@ -13,8 +14,7 @@ function Home() {
       <div className='welcome'>
         <div className='welcome-main'>BIENVENUE</div>
         <div className='welcome-sub'>SUR LE PORTAIL</div>
-      </div>
-      {/* <Banner bannerClass='home-banner' bannerText='Chez vous, partout et ailleurs' />  
+      </div>      <Entrer />      {/* <Banner bannerClass='home-banner' bannerText='Chez vous, partout et ailleurs' />  
       <div className='home-housing'> 
         {logements.map(logement => (
           <Link className='home-linkHousing' key={logement.id} to={`/housing/${logement.id}`}> 
