@@ -4,7 +4,7 @@
 .header {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     max-width: $screen-maw-width;
     padding-top: 20px;
 
@@ -41,19 +41,60 @@
     }
 
     &-link {
-        text-decoration: $link-decoration;
+        text-decoration: none;
         height: 48px;
-        color: $primary-color;
+        color: blue;
+        font-weight: bold;
+        font-size: 40px;
         display: flex;
         align-items: center;
 
         &:hover {
-            text-decoration: $link-decoration-hover; 
+            text-decoration: none; 
         }
     }
 
     &-linkActive {
-        text-decoration: underline;
+        text-decoration: none;
+        color: blue;
+        font-weight: bold;
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+    }
+
+    &-left {
+        display: flex;
+        align-items: center;
+        padding-left: $screen-padding;
+
+        @media (max-width: $media-queries-mobile) {
+            padding-left: $media-screen-padding;
+        }
+    }
+
+    &-chevron {
+        color: blue;
+        font-weight: bold;
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+    }
+
+    &-right {
+        display: flex;
+        align-items: center;
+        padding-right: $screen-padding;
+
+        @media (max-width: $media-queries-mobile) {
+            padding-right: $media-screen-padding;
+        }
+    }
+
+    &-dots {
+        color: blue;
+        font-weight: bold;
+        font-size: 40px;
         display: flex;
         align-items: center;
     }

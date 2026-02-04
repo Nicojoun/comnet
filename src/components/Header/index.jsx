@@ -8,7 +8,12 @@ function Header() {
   return (
     <div className='header'>
 
+      <div className='header-left'>
+        <span className='header-chevron'>{'<'}</span>
+      </div>
+
       <nav className='header-nav'>
+
 
         {/* Si on est sur la page d'accueil, afficher du texte souligné, sinon un lien */}
         {location.pathname === '/' ? (
@@ -19,6 +24,10 @@ function Header() {
 
 
       </nav>
+
+      <div className='header-right'>
+        <span className='header-dots'>•••</span>
+      </div>
     </div>
   );
 }
