@@ -3,6 +3,7 @@
 
 .home {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -46,6 +47,20 @@
 
 
 
+.welcome {
+    text-align: center;
+    margin-top: 20px;
 
+    &-main {
+        color: blue;
+        font-weight: bold;
+        font-size: 48px;
+    }
+
+    &-sub {
+        font-size: 24px;
+        color: blue;
+    }
+}
 
 

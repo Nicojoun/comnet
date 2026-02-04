@@ -10,6 +10,10 @@ function Home() {
   return (
     <div className='home'>
       <Logo />
+      <div className='welcome'>
+        <div className='welcome-main'>BIENVENUE</div>
+        <div className='welcome-sub'>SUR LE PORTAIL</div>
+      </div>
       {/* <Banner bannerClass='home-banner' bannerText='Chez vous, partout et ailleurs' />  
       <div className='home-housing'> 
         {logements.map(logement => (
