@@ -7,6 +7,9 @@ function Categories() {
     <div className='categories'>
       <h1 style={{color: 'blue'}}>catégories</h1>
       <Caterolink text="F.A.Q." />
+      <Caterolink text="INFO" />
+      <Caterolink text="METEO" />
+      <Caterolink text="SERVICES" />
     </div>
   );
 }
