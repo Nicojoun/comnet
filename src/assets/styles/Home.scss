@@ -3,10 +3,9 @@
 
 .home {
     display: flex;
-    flex-direction: column;
-    gap: 50px;
-    padding-left: $screen-padding;
-    padding-right: $screen-padding;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 
     @media (max-width: $media-queries-mobile) {
         gap: 10px;
