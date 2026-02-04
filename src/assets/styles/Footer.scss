@@ -2,7 +2,7 @@
 @import 'variablesMedia'; 
 
 .footer {
-    background-color: $primary-color;
+    background-color: white;
     font: 500 24px $font-text;
     width: 100%;
     height: 209px;
@@ -10,6 +10,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 
     &-items {
         display: flex;
@@ -39,3 +40,12 @@
     }
 
   }
+
+.footer-bar {
+  position: absolute;
+  top: 139px;
+  left: 15%;
+  right: 15%;
+  height: 5px;
+  background: black;
+}
