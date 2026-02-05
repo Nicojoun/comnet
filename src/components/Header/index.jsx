@@ -3,10 +3,11 @@ import logo from '../../assets/logo/logo.png';
 import { Link, useLocation } from 'react-router-dom';  
 
 function Header() {
-  const location = useLocation(); // Récupération de l'URL actuelle
+  const location = useLocation();
+  const isQuestionPage = location.pathname === '/question'; // Récupération de l'URL actuelle
 
   return (
-    <div className='header'>
+    <div className={`header${isQuestionPage ? ' header--inverse' : ''}`}>
 
       <div className='header-left'>
         <span className='header-chevron'>{'<'}</span>

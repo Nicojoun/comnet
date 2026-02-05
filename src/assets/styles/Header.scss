@@ -100,3 +100,14 @@
     }
 
 }
+
+.header--inverse {
+    background: blue;
+}
+
+.header--inverse .header-link,
+.header--inverse .header-linkActive,
+.header--inverse .header-chevron,
+.header--inverse .header-dots {
+    color: white;
+}

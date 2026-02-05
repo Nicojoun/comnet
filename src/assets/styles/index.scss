@@ -24,3 +24,18 @@
 
 }
 
+.index--question {
+  background: blue;
+  align-items: stretch;
+}
+
+.index--question .footer {
+  background-color: transparent;
+}
+
+.index--question .index-container {
+  max-width: 100%;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}

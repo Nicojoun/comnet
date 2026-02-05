@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, useLocation } from 'react-router-dom';
 
 import './assets/styles/index.scss';
 
@@ -9,17 +9,26 @@ import Footer from './components/Footer';
 
 import AppRoutes from './Routes';
 
+function AppLayout() {
+  const location = useLocation();
+  const isQuestionPage = location.pathname === '/question';
+
+  return (
+    <div className={`index${isQuestionPage ? ' index--question' : ''}`}>
+      <Header />
+      <div className='index-container'>
+        <AppRoutes />
+      </div>
+      <Footer />
+    </div>
+  );
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <div className='index'> 
-        <Header /> 
-        <div className='index-container'>
-          <AppRoutes />
-        </div>  
-        <Footer />
-      </div>
+      <AppLayout />
     </Router>
   </React.StrictMode>
 );
