@@ -25,12 +25,11 @@
 }
 
 .index--question {
-  background: blue;
   align-items: stretch;
 }
 
 .index--question .footer {
-  background-color: transparent;
+  background-color: white;
 }
 
 .index--question .index-container {
@@ -38,4 +37,8 @@
   width: 100%;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.index--question .footer-bar {
+  display: none;
 }

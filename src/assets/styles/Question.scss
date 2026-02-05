@@ -1,8 +1,10 @@
 .question {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 24px;
+  gap: 0;
+  width: 100%;
+  min-height: 100%;
+  flex: 1;
 }
 
 .question-hero {
@@ -11,17 +13,36 @@
   color: white;
   margin: 0;
   line-height: 0.95;
+  background: blue;
+  width: 100%;
+  padding: 16px 0;
+  padding-left: 4%;
+}
+
+.questionask {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 0;
+  flex: 1;
+  width: 100%;
 }
 
 .question-title {
   font-size: 28px;
   font-weight: 700;
-  color: white;
+  color: #1b1f3b;
   margin: 0;
 }
 
 .question-subtitle {
   font-size: 16px;
-  color: white;
+  color: #2f3a56;
   margin: 0;
+}
+
+.question-text {
+  font-size: 14px;
+  color: #2f3a56;
+  margin: 8px 0 16px 0;
 }
