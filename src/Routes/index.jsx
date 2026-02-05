@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home'; 
 import Categories from '../pages/Categories'; 
 import About from '../pages/About';
+import Question from '../pages/Question';
 // import Meteo from '../pages/Meteo'; 
 // import Services from '../pages/Services'; 
 import NotFound from '../pages/NotFound';
@@ -13,6 +14,7 @@ function AppRoutes() {
                 <Route path='/' element={<Home />} />  {/* Route pour la page d'accueil */}
                 <Route path='/categories' element={<Categories />} />  {/* Route pour la page catégories */}
                 <Route path='/about' element={<About />} />  {/* Route pour la page à propos */}            
+                <Route path='/question' element={<Question />} />  {/* Route pour la page question */}
                 <Route path='*' element={<NotFound />} />  {/* Route pour la page d'erreurs */}
             </Routes>
     )

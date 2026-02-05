@@ -1,0 +1,19 @@
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+}
+
+.question-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1b1f3b;
+  margin: 0;
+}
+
+.question-subtitle {
+  font-size: 16px;
+  color: #2f3a56;
+  margin: 0;
+}

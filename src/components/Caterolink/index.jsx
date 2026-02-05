@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Caterolink({ text }) {
   const getRoute = (text) => {
     switch(text) {
-      case 'F.A.Q.': return '/faq';
+      case 'F.A.Q.': return '/question';
       case 'INFO': return '/about';
       case 'METEO': return '/meteo';
       case 'SERVICES': return '/services';
