@@ -1,0 +1,37 @@
+@import 'variables';
+@import 'variablesMedia';
+
+.research-field {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+
+  @media (max-width: $media-queries-mobile) {
+    max-width: 100%;
+  }
+}
+
+.research-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: blue;
+  pointer-events: none;
+}
+
+.research {
+  width: 100%;
+  padding: 10px 14px 10px 36px;
+  border: 1px solid blue;
+  border-radius: 8px;
+  font: 400 14px $font-text;
+  color: $primary-color;
+  background-color: $secondary-color;
+
+  &::placeholder {
+    color: $primary-color;
+    opacity: 0.6;
+  }
+}
