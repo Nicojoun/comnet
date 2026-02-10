@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import Categories from '../pages/Categories'; 
 import About from '../pages/About';
 import Question from '../pages/Question';
+import Map from '../pages/Map';
 // import Meteo from '../pages/Meteo'; 
 // import Services from '../pages/Services'; 
 import NotFound from '../pages/NotFound';
@@ -15,9 +16,11 @@ function AppRoutes() {
                 <Route path='/categories' element={<Categories />} />  {/* Route pour la page catégories */}
                 <Route path='/about' element={<About />} />  {/* Route pour la page à propos */}            
                 <Route path='/question' element={<Question />} />  {/* Route pour la page question */}
+                <Route path='/map' element={<Map />} />  {/* Route pour la page map */}
                 <Route path='*' element={<NotFound />} />  {/* Route pour la page d'erreurs */}
             </Routes>
     )
 }
 
 export default AppRoutes;
+

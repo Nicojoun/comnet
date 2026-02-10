@@ -1,0 +1,45 @@
+@import 'variables';
+@import 'variablesMedia';
+
+.map {
+  padding-left: $screen-padding;
+  padding-right: $screen-padding;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (max-width: $media-queries-mobile) {
+    padding-left: $media-screen-padding;
+    padding-right: $media-screen-padding;
+    gap: 12px;
+  }
+
+  &-title {
+    font: 500 36px $font-text;
+    color: blue;
+
+    @media (max-width: $media-queries-mobile) {
+      font: 500 20px $font-text;
+    }
+  }
+
+  &-frame {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid $fourth-color;
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 70vh;
+      min-height: 320px;
+      border: 0;
+    }
+  }
+
+  &-error {
+    font: 400 14px $font-text;
+    color: $primary-color;
+  }
+}
