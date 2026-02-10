@@ -10,6 +10,7 @@ function Categories() {
     'INFO',
     'METEO',
     'SERVICES',
+    'LOCALISATION',
   ]), []);
 
   const filteredItems = useMemo(() => {

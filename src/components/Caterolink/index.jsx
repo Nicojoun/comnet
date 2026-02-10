@@ -8,6 +8,7 @@ function Caterolink({ text }) {
       case 'INFO': return '/about';
       case 'METEO': return '/meteo';
       case 'SERVICES': return '/services';
+      case 'LOCALISATION': return '/map';
       default: return '/';
     }
   };
