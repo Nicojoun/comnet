@@ -16,7 +16,7 @@
     }
 
     &-404 {
-        color: $tertiary-color;
+        color: blue;
         font: 700 288px $font-text;
         display: flex;
         justify-content: center;
@@ -41,7 +41,7 @@
 
     &-message {
         font: 500 36px $font-text;
-        color: $tertiary-color;
+        color: blue;
         display: flex;
         text-align: center;
 
