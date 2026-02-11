@@ -1,0 +1,23 @@
+@import 'variables';
+@import 'variablesMedia';
+
+.connect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0;
+
+  &-link {
+    text-decoration: none;
+    color: white;
+    background: blue;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 12px 24px;
+    border-radius: 8px;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

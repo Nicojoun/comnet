@@ -1,0 +1,56 @@
+@import 'variables';
+@import 'variablesMedia';
+
+.login {
+  width: 100%;
+  padding: 24px;
+
+  &-title {
+    color: blue;
+    font-size: 48px;
+    margin: 0 0 12px 0;
+  }
+
+  &-text {
+    color: #1b1f3b;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 360px;
+  }
+
+  &-label {
+    color: #1b1f3b;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &-input {
+    border: 1px solid #c5cbe3;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  &-button {
+    margin-top: 8px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 6px;
+    background: blue;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
