@@ -98,6 +98,11 @@
         font-size: 40px;
         display: flex;
         align-items: center;
+        margin-right: $screen-padding;
+
+        @media (max-width: $media-queries-mobile) {
+            margin-right: $media-screen-padding;
+        }
     }
 
 }
