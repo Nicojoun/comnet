@@ -1,7 +1,7 @@
 import '../../assets/styles/Caterolink.scss';
 import { Link } from 'react-router-dom';
 
-function Caterolink({ text }) {
+function Caterolink({ text, color = 'blue' }) {
   const getRoute = (text) => {
     switch(text) {
       case 'F.A.Q.': return '/question';
@@ -14,7 +14,7 @@ function Caterolink({ text }) {
   };
 
   return (
-    <div className='caterolink'>
+    <div className={`caterolink caterolink--${color}`}>
       <Link to={getRoute(text)}>
         <span className='caterolink-text'>{text}</span>
       </Link>
