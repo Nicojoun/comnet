@@ -24,11 +24,18 @@
 }
 
 .meteo-col {
+  position: relative;
   padding: 28px 40px 32px;
 }
 
-.meteo-col + .meteo-col {
-  border-left: 4px solid #8f8f92;
+.meteo-col + .meteo-col::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 96px;
+  bottom: 20px;
+  width: 4px;
+  background: #8f8f92;
 }
 
 .meteo-colTitle {
@@ -159,8 +166,11 @@
   }
 
   .meteo-col + .meteo-col {
-    border-left: none;
     border-top: 3px solid #8f8f92;
+  }
+
+  .meteo-col + .meteo-col::before {
+    content: none;
   }
 }
 
