@@ -1,4 +1,5 @@
-import { Route, Routes } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 
 import Home from '../pages/Home';
 import Categories from '../pages/Categories';
@@ -12,6 +13,23 @@ import Login from '../pages/Login';
 import NotFound from '../pages/NotFound';
 
 function AppRoutes() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.state?.fromCategoriesTransition) {
+      return;
+    }
+
+    window.scrollTo(0, 0);
+
+    window.setTimeout(() => {
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: 'smooth',
+      });
+    }, 50);
+  }, [location.key]);
+
   return (
     <Routes>
       <Route path='/' element={<Home />} />
