@@ -1,0 +1,35 @@
+@import "variables";
+@import "variablesMedia";
+
+.meteo {
+  padding-left: $screen-padding;
+  padding-right: $screen-padding;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.meteo-title {
+  font: 700 40px $font-text;
+  color: $secondary-color;
+}
+
+.meteo-text {
+  font: 400 20px $font-text;
+  color: $tertiary-color;
+}
+
+@media (max-width: $media-queries-mobile) {
+  .meteo {
+    padding-left: $media-screen-padding;
+    padding-right: $media-screen-padding;
+  }
+
+  .meteo-title {
+    font: 700 26px $font-text;
+  }
+
+  .meteo-text {
+    font: 400 16px $font-text;
+  }
+}
