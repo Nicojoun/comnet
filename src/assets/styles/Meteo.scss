@@ -14,7 +14,7 @@
 .meteo-topTitle {
   margin: 0;
   color: white;
-  font: 500 48px $font-text;
+  font: 500 38px $font-text;
 }
 
 .meteo-board {
@@ -34,7 +34,7 @@
 .meteo-colTitle {
   margin: 0 0 28px;
   color: #111;
-  font: 700 38px $font-text;
+  font: 700 30px $font-text;
 }
 
 .meteo-colHead {
@@ -51,7 +51,7 @@
   padding: 8px 16px;
   color: white;
   background: #d15a35;
-  font: 500 26px $font-text;
+  font: 500 20px $font-text;
 }
 
 .meteo-slot {
@@ -65,21 +65,21 @@
 .meteo-slotTitle {
   margin: 0;
   color: #111;
-  font: 700 40px $font-text;
+  font: 700 32px $font-text;
   grid-column: 1;
 }
 
 .meteo-label {
   margin: 0;
   color: #6d6d70;
-  font: 500 40px $font-text;
+  font: 500 32px $font-text;
   grid-column: 1;
 }
 
 .meteo-temp {
   margin: 6px 0;
   color: #000;
-  font: 700 92px $font-text;
+  font: 700 76px $font-text;
   line-height: 1;
   grid-column: 1;
 }
@@ -87,7 +87,7 @@
 .meteo-climate {
   margin: 0;
   color: #6d6d70;
-  font: 500 36px $font-text;
+  font: 500 28px $font-text;
 }
 
 .meteo-climateRow {
@@ -100,6 +100,16 @@
 }
 
 .meteo-climateRow--rainy {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.meteo-climateRow--cloudy {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.meteo-climateRow--sunny {
   flex-direction: column;
   align-items: flex-start;
 }
@@ -126,7 +136,7 @@
 .meteo-outfitTemp {
   margin: 0 0 20px;
   color: #000;
-  font: 700 66px $font-text;
+  font: 700 52px $font-text;
 }
 
 .meteo-outfitIcon {
@@ -139,7 +149,7 @@
 .meteo-outfitText {
   margin: 0;
   color: #6d6d70;
-  font: 500 32px $font-text;
+  font: 500 24px $font-text;
   line-height: 1.25;
 }
 
@@ -160,7 +170,7 @@
   }
 
   .meteo-topTitle {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .meteo-col {
@@ -168,29 +178,29 @@
   }
 
   .meteo-colTitle {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 16px;
   }
 
   .meteo-dateTag {
-    font-size: 18px;
+    font-size: 16px;
     padding: 6px 10px;
   }
 
   .meteo-slotTitle {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .meteo-label {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   .meteo-temp {
-    font-size: 62px;
+    font-size: 52px;
   }
 
   .meteo-climate {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .meteo-weather {
@@ -210,7 +220,7 @@
   }
 
   .meteo-outfitTemp {
-    font-size: 46px;
+    font-size: 38px;
   }
 
   .meteo-outfitIcon {
@@ -219,6 +229,6 @@
   }
 
   .meteo-outfitText {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
