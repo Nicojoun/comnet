@@ -14,7 +14,7 @@
 .meteo-topTitle {
   margin: 0;
   color: white;
-  font: 500 64px $font-text;
+  font: 500 48px $font-text;
 }
 
 .meteo-board {
@@ -34,7 +34,7 @@
 .meteo-colTitle {
   margin: 0 0 28px;
   color: #111;
-  font: 700 48px $font-text;
+  font: 700 38px $font-text;
 }
 
 .meteo-colHead {
@@ -51,55 +51,95 @@
   padding: 8px 16px;
   color: white;
   background: #d15a35;
-  font: 500 34px $font-text;
+  font: 500 26px $font-text;
 }
 
 .meteo-slot {
   margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 24px;
+  align-items: center;
 }
 
 .meteo-slotTitle {
   margin: 0;
   color: #111;
-  font: 700 50px $font-text;
+  font: 700 40px $font-text;
+  grid-column: 1;
 }
 
 .meteo-label {
   margin: 0;
   color: #6d6d70;
-  font: 500 52px $font-text;
+  font: 500 40px $font-text;
+  grid-column: 1;
 }
 
 .meteo-temp {
   margin: 6px 0;
   color: #000;
-  font: 700 120px $font-text;
+  font: 700 92px $font-text;
   line-height: 1;
+  grid-column: 1;
 }
 
 .meteo-climate {
   margin: 0;
   color: #6d6d70;
-  font: 500 48px $font-text;
+  font: 500 36px $font-text;
+}
+
+.meteo-climateRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  grid-column: 2;
+  grid-row: 1 / span 3;
+}
+
+.meteo-climateRow--rainy {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.meteo-weather {
+  width: 120px;
+  height: 90px;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.meteo-weather--rainy {
+  background: #666;
+}
+
+.meteo-weather--cloudy {
+  background: #c7c7c7;
+}
+
+.meteo-weather--sunny {
+  background: #e0cf3a;
 }
 
 .meteo-outfitTemp {
   margin: 0 0 20px;
   color: #000;
-  font: 700 84px $font-text;
+  font: 700 66px $font-text;
 }
 
 .meteo-outfitIcon {
-  margin: 10px 0 24px;
-  font-size: 170px;
-  line-height: 1;
-  text-align: center;
+  margin: 10px auto 24px;
+  width: 100px;
+  height: 200px;
+  background: #1f4ea3;
 }
 
 .meteo-outfitText {
   margin: 0;
   color: #6d6d70;
-  font: 500 42px $font-text;
+  font: 500 32px $font-text;
   line-height: 1.25;
 }
 
@@ -120,7 +160,7 @@
   }
 
   .meteo-topTitle {
-    font-size: 40px;
+    font-size: 32px;
   }
 
   .meteo-col {
@@ -128,40 +168,57 @@
   }
 
   .meteo-colTitle {
-    font-size: 34px;
+    font-size: 28px;
     margin-bottom: 16px;
   }
 
   .meteo-dateTag {
-    font-size: 22px;
+    font-size: 18px;
     padding: 6px 10px;
   }
 
   .meteo-slotTitle {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .meteo-label {
-    font-size: 34px;
+    font-size: 26px;
   }
 
   .meteo-temp {
-    font-size: 76px;
+    font-size: 62px;
   }
 
   .meteo-climate {
-    font-size: 30px;
+    font-size: 24px;
+  }
+
+  .meteo-weather {
+    width: 72px;
+    height: 54px;
+    border-radius: 10px;
+  }
+
+  .meteo-slot {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+
+  .meteo-climateRow {
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .meteo-outfitTemp {
-    font-size: 56px;
+    font-size: 46px;
   }
 
   .meteo-outfitIcon {
-    font-size: 100px;
+    width: 100px;
+    height: 200px;
   }
 
   .meteo-outfitText {
-    font-size: 28px;
+    font-size: 22px;
   }
 }

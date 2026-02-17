@@ -14,22 +14,28 @@ function Meteo() {
           <div className="meteo-slot">
             <h3 className="meteo-slotTitle">Matin</h3>
             <p className="meteo-label">Temperature</p>
-            <p className="meteo-temp">9 deg</p>
-            <p className="meteo-climate">Climat pluvieux</p>
+            <p className="meteo-temp">9°</p>
+            <div className="meteo-climateRow meteo-climateRow--rainy">
+              <p className="meteo-climate">Climat pluvieux</p>
+              <div className="meteo-weather meteo-weather--rainy" />
+            </div>
           </div>
 
           <div className="meteo-slot">
             <h3 className="meteo-slotTitle">Apres-midi</h3>
             <p className="meteo-label">Temperature</p>
-            <p className="meteo-temp">16 deg</p>
-            <p className="meteo-climate">Climat ensoleille</p>
+            <p className="meteo-temp">16°</p>
+            <div className="meteo-climateRow">
+              <p className="meteo-climate">Climat ensoleille</p>
+              <div className="meteo-weather meteo-weather--sunny" />
+            </div>
           </div>
         </section>
 
         <section className="meteo-col meteo-col--outfit">
           <h2 className="meteo-colTitle">Tenue conseillee</h2>
-          <p className="meteo-outfitTemp">16 deg</p>
-          <div className="meteo-outfitIcon" aria-hidden="true">TENUE</div>
+          <p className="meteo-outfitTemp">16°</p>
+          <div className="meteo-outfitIcon" aria-hidden="true" />
           <p className="meteo-outfitText">
             Legere et decontractee
             <br />
@@ -46,15 +52,21 @@ function Meteo() {
           <div className="meteo-slot">
             <h3 className="meteo-slotTitle">Matin</h3>
             <p className="meteo-label">Temperature</p>
-            <p className="meteo-temp">12 deg</p>
-            <p className="meteo-climate">Climat nuageux</p>
+            <p className="meteo-temp">12°</p>
+            <div className="meteo-climateRow">
+              <p className="meteo-climate">Climat nuageux</p>
+              <div className="meteo-weather meteo-weather--cloudy" />
+            </div>
           </div>
 
           <div className="meteo-slot">
             <h3 className="meteo-slotTitle">Apres-midi</h3>
             <p className="meteo-label">Temperature</p>
-            <p className="meteo-temp">19 deg</p>
-            <p className="meteo-climate">Climat ensoleille</p>
+            <p className="meteo-temp">19°</p>
+            <div className="meteo-climateRow">
+              <p className="meteo-climate">Climat ensoleille</p>
+              <div className="meteo-weather meteo-weather--sunny" />
+            </div>
           </div>
         </section>
       </div>
