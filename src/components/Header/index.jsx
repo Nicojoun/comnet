@@ -5,9 +5,14 @@ import Connect from '../Connect';
 function Header() {
   const location = useLocation();
   const isQuestionPage = location.pathname === '/question';
+  const isMeteoPage = location.pathname === '/meteo';
 
   return (
-    <div className={`header${isQuestionPage ? ' header--inverse' : ''}`}>
+    <div
+      className={`header${isQuestionPage ? ' header--inverse' : ''}${
+        isMeteoPage ? ' header--meteo' : ''
+      }`}
+    >
       <div className='header-left'>
         <span className='header-chevron'>{'<'}</span>
       </div>

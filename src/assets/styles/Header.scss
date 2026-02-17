@@ -126,7 +126,18 @@
 .header--inverse .header-link,
 .header--inverse .header-linkActive,
 .header--inverse .header-chevron,
-.header--inverse .header-dots,
-.header--inverse .connect-link {
+.header--inverse .header-dots {
+    color: white;
+}
+
+.header--meteo {
+    background: #d15a35;
+}
+
+.header--meteo .header-link,
+.header--meteo .header-linkActive,
+.header--meteo .header-chevron,
+.header--meteo .header-dots,
+.header--meteo .connect-link {
     color: white;
 }

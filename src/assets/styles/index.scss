@@ -57,3 +57,14 @@ body,
 .index--question .footer-bar {
   display: none;
 }
+
+.index--meteo {
+  align-items: stretch;
+}
+
+.index--meteo .index-container {
+  max-width: 100%;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}

@@ -2,34 +2,166 @@
 @import "variablesMedia";
 
 .meteo {
-  padding-left: $screen-padding;
-  padding-right: $screen-padding;
+  padding: 0;
+  overflow: hidden;
+}
+
+.meteo-top {
+  background: #d15a35;
+  padding: 28px 40px 18px;
+}
+
+.meteo-topTitle {
+  margin: 0;
+  color: white;
+  font: 500 64px $font-text;
+}
+
+.meteo-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+}
+
+.meteo-col {
+  padding: 28px 40px 32px;
+}
+
+.meteo-col + .meteo-col {
+  border-left: 4px solid #8f8f92;
+}
+
+.meteo-colTitle {
+  margin: 0 0 28px;
+  color: #111;
+  font: 700 48px $font-text;
+}
+
+.meteo-colHead {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
 }
 
-.meteo-title {
-  font: 700 40px $font-text;
-  color: $secondary-color;
+.meteo-dateTag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  color: white;
+  background: #d15a35;
+  font: 500 34px $font-text;
 }
 
-.meteo-text {
-  font: 400 20px $font-text;
-  color: $tertiary-color;
+.meteo-slot {
+  margin-bottom: 28px;
+}
+
+.meteo-slotTitle {
+  margin: 0;
+  color: #111;
+  font: 700 50px $font-text;
+}
+
+.meteo-label {
+  margin: 0;
+  color: #6d6d70;
+  font: 500 52px $font-text;
+}
+
+.meteo-temp {
+  margin: 6px 0;
+  color: #000;
+  font: 700 120px $font-text;
+  line-height: 1;
+}
+
+.meteo-climate {
+  margin: 0;
+  color: #6d6d70;
+  font: 500 48px $font-text;
+}
+
+.meteo-outfitTemp {
+  margin: 0 0 20px;
+  color: #000;
+  font: 700 84px $font-text;
+}
+
+.meteo-outfitIcon {
+  margin: 10px 0 24px;
+  font-size: 170px;
+  line-height: 1;
+  text-align: center;
+}
+
+.meteo-outfitText {
+  margin: 0;
+  color: #6d6d70;
+  font: 500 42px $font-text;
+  line-height: 1.25;
+}
+
+@media (max-width: 1200px) {
+  .meteo-board {
+    grid-template-columns: 1fr;
+  }
+
+  .meteo-col + .meteo-col {
+    border-left: none;
+    border-top: 3px solid #8f8f92;
+  }
 }
 
 @media (max-width: $media-queries-mobile) {
-  .meteo {
-    padding-left: $media-screen-padding;
-    padding-right: $media-screen-padding;
+  .meteo-top {
+    padding: 18px 16px 14px;
   }
 
-  .meteo-title {
-    font: 700 26px $font-text;
+  .meteo-topTitle {
+    font-size: 40px;
   }
 
-  .meteo-text {
-    font: 400 16px $font-text;
+  .meteo-col {
+    padding: 18px 16px 20px;
+  }
+
+  .meteo-colTitle {
+    font-size: 34px;
+    margin-bottom: 16px;
+  }
+
+  .meteo-dateTag {
+    font-size: 22px;
+    padding: 6px 10px;
+  }
+
+  .meteo-slotTitle {
+    font-size: 30px;
+  }
+
+  .meteo-label {
+    font-size: 34px;
+  }
+
+  .meteo-temp {
+    font-size: 76px;
+  }
+
+  .meteo-climate {
+    font-size: 30px;
+  }
+
+  .meteo-outfitTemp {
+    font-size: 56px;
+  }
+
+  .meteo-outfitIcon {
+    font-size: 100px;
+  }
+
+  .meteo-outfitText {
+    font-size: 28px;
   }
 }

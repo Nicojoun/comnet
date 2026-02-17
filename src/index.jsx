@@ -12,9 +12,14 @@ import AppRoutes from './Routes';
 function AppLayout() {
   const location = useLocation();
   const isQuestionPage = location.pathname === '/question';
+  const isMeteoPage = location.pathname === '/meteo';
 
   return (
-    <div className={`index${isQuestionPage ? ' index--question' : ''}`}>
+    <div
+      className={`index${isQuestionPage ? ' index--question' : ''}${
+        isMeteoPage ? ' index--meteo' : ''
+      }`}
+    >
       <Header />
       <div className='index-container'>
         <AppRoutes />
