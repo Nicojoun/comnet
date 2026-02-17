@@ -160,6 +160,16 @@
   line-height: 1.25;
 }
 
+.meteo-status {
+  margin: 12px 16px;
+  font: 500 18px $font-text;
+  color: #4d4d4d;
+}
+
+.meteo-status--error {
+  color: #b00020;
+}
+
 @media (max-width: 1200px) {
   .meteo-board {
     grid-template-columns: 1fr;
@@ -240,5 +250,9 @@
 
   .meteo-outfitText {
     font-size: 18px;
+  }
+
+  .meteo-status {
+    font-size: 16px;
   }
 }
