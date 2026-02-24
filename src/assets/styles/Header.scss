@@ -48,6 +48,10 @@
         display: flex;
         align-items: center;
 
+        @media (max-width: $media-queries-mobile) {
+            font-size: 22px;
+        }
+
         &:hover {
             text-decoration: none; 
         }
@@ -60,6 +64,10 @@
         font-size: 40px;
         display: flex;
         align-items: center;
+
+        @media (max-width: $media-queries-mobile) {
+            font-size: 22px;
+        }
     }
 
     &-left {
@@ -78,6 +86,10 @@
         font-size: 40px;
         display: flex;
         align-items: center;
+
+        @media (max-width: $media-queries-mobile) {
+            font-size: 26px;
+        }
     }
 
     &-right {
@@ -101,6 +113,7 @@
         margin-right: $screen-padding;
 
         @media (max-width: $media-queries-mobile) {
+            font-size: 26px;
             margin-right: $media-screen-padding;
         }
     }
