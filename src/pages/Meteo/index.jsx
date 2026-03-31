@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../../assets/styles/Meteo.scss";
+import weatherImage from "../../image/Orc Meteo.gif";
 
 const DEFAULT_SLOT = {
   temp: "--",
@@ -118,6 +119,7 @@ function Meteo() {
     <section className="meteo">
       <header className="meteo-top">
         <h1 className="meteo-topTitle">Meteo</h1>
+        <img src={weatherImage} alt="Illustration meteo" className="meteo-image" />
       </header>
 
       <div className="meteo-board">

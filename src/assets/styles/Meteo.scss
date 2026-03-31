@@ -9,12 +9,22 @@
 .meteo-top {
   background: #d15a35;
   padding: 28px 40px 18px;
+  text-align: center;
 }
 
 .meteo-topTitle {
   margin: 0;
   color: white;
   font: 500 38px $font-text;
+}
+
+.meteo-image {
+  display: inline-block;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin-top: 14px;
+  border-radius: 8px;
 }
 
 .meteo-board {
