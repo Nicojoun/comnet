@@ -7,6 +7,15 @@ function Header() {
   const isQuestionPage = location.pathname === '/question';
   const isMeteoPage = location.pathname === '/meteo';
 
+  const categoryPages = [
+    { path: '/', label: 'ACCUEIL' },
+    { path: '/question', label: 'F.A.Q.' },
+    { path: '/about', label: 'INFO' },
+    { path: '/meteo', label: 'METEO' },
+    { path: '/services', label: 'SERVICES' },
+    { path: '/map', label: 'LOCALISATION' },
+  ];
+
   return (
     <div
       className={`header${isQuestionPage ? ' header--inverse' : ''}${
@@ -18,11 +27,18 @@ function Header() {
       </div>
 
       <nav className='header-nav'>
-        {location.pathname === '/' ? (
-          <span className='header-linkActive'>ESATYPIC</span>
-        ) : (
-          <Link to='/' className='header-link'>ESATYPIC</Link>
-        )}
+        {categoryPages.map((page) => {
+          const isActive = location.pathname === page.path;
+          return isActive ? (
+            <span key={page.path} className='header-linkActive'>
+              {page.label}
+            </span>
+          ) : (
+            <Link key={page.path} to={page.path} className='header-link'>
+              {page.label}
+            </Link>
+          );
+        })}
       </nav>
 
       <div className='header-right'>
