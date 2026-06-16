@@ -28,7 +28,10 @@
 
     &-nav {
         display: flex;
+        flex: 1;
+        flex-wrap: wrap;
         gap: 50px;
+        row-gap: 12px;
         padding-right: $screen-padding;
         font: 500 24px $font-text;;
 
@@ -153,4 +156,20 @@
 .header--meteo .header-dots,
 .header--meteo .connect-link {
     color: white;
+}
+
+/* icon next to header links */
+.header .header-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    margin-right: 12px;
+}
+
+@media (max-width: $media-queries-mobile) {
+    .header .header-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
 }

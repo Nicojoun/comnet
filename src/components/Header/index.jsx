@@ -2,22 +2,33 @@ import '../../assets/styles/Header.scss';
 import { Link, useLocation } from 'react-router-dom';
 import Connect from '../Connect';
 
+import imgAccueil from '../../image/Pictogramme Actualités.png';
+import imgFaq from '../../image/Pictogramme F.A.Q..png';
+import imgInfo from '../../image/Pictogramme Production.png';
+import imgMeteo from '../../image/Pictogramme Météo.png';
+import imgServices from '../../image/Pictogramme Service.png';
+import imgFormation from '../../image/Pictogramme Formation.png';
+import imgDetachement from '../../image/Pictogramme Détachements.png';
+import imgVie from "../../image/Pictogramme Vie de l'esat.png";
+import imgForum from '../../image/Pictogramme Forum.png';
+import imgMap from '../../image/Pictogramme Itinéraire.png';
+
 function Header() {
   const location = useLocation();
   const isQuestionPage = location.pathname === '/question';
   const isMeteoPage = location.pathname === '/meteo';
 
   const categoryPages = [
-    { path: '/', label: 'ACCUEIL' },
-    { path: '/question', label: 'F.A.Q.' },
-    { path: '/about', label: 'INFO' },
-    { path: '/meteo', label: 'METEO' },
-    { path: '/services', label: 'SERVICES' },
-    { path: '/formation', label: 'FORMATION' },
-    { path: '/detachement', label: 'DETACHEMENT' },
-    { path: '/vie-esat', label: 'VIE ESAT' },
-    { path: '/forum', label: 'FORUM' },
-    { path: '/map', label: 'LOCALISATION' },
+    { path: '/', label: 'ACCUEIL', icon: imgAccueil },
+    { path: '/question', label: 'F.A.Q.', icon: imgFaq },
+    { path: '/about', label: 'INFO', icon: imgInfo },
+    { path: '/meteo', label: 'METEO', icon: imgMeteo },
+    { path: '/services', label: 'SERVICES', icon: imgServices },
+    { path: '/formation', label: 'FORMATION', icon: imgFormation },
+    { path: '/detachement', label: 'DETACHEMENT', icon: imgDetachement },
+    { path: '/vie-esat', label: 'VIE ESAT', icon: imgVie },
+    { path: '/forum', label: 'FORUM', icon: imgForum },
+    { path: '/map', label: 'LOCALISATION', icon: imgMap },
   ];
 
   return (
@@ -33,13 +44,21 @@ function Header() {
       <nav className='header-nav'>
         {categoryPages.map((page) => {
           const isActive = location.pathname === page.path;
+          const Icon = page.icon;
+          const content = (
+            <>
+              {Icon && <img src={Icon} alt={page.label} className="header-icon" />}
+              {page.label}
+            </>
+          );
+
           return isActive ? (
             <span key={page.path} className='header-linkActive'>
-              {page.label}
+              {content}
             </span>
           ) : (
             <Link key={page.path} to={page.path} className='header-link'>
-              {page.label}
+              {content}
             </Link>
           );
         })}
