@@ -13,6 +13,10 @@ function Header() {
     { path: '/about', label: 'INFO' },
     { path: '/meteo', label: 'METEO' },
     { path: '/services', label: 'SERVICES' },
+    { path: '/formation', label: 'FORMATION' },
+    { path: '/detachement', label: 'DETACHEMENT' },
+    { path: '/vie-esat', label: 'VIE ESAT' },
+    { path: '/forum', label: 'FORUM' },
     { path: '/map', label: 'LOCALISATION' },
   ];
 
