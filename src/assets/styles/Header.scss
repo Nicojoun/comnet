@@ -44,19 +44,23 @@
 
     &-link {
         text-decoration: none;
-        height: 48px;
         color: blue;
         font-weight: bold;
         font-size: 40px;
         display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        gap: 8px;
+        height: auto;
 
         @media (max-width: $media-queries-mobile) {
             font-size: 22px;
+            gap: 6px;
         }
 
         &:hover {
-            text-decoration: none; 
+            text-decoration: none;
         }
     }
 
@@ -66,10 +70,14 @@
         font-weight: bold;
         font-size: 40px;
         display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        gap: 8px;
 
         @media (max-width: $media-queries-mobile) {
             font-size: 22px;
+            gap: 6px;
         }
     }
 
