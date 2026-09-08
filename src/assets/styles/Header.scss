@@ -4,6 +4,7 @@
 .header {
     width: 100%;
     display: flex;
+    align-items: flex-end;
     justify-content: space-between;
     padding-top: 20px;
 
@@ -105,7 +106,7 @@
 
     &-right {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         gap: 12px;
         padding-right: 0;
 

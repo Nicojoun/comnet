@@ -3,9 +3,22 @@
 
 .connect {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 24px 0;
+  gap: 4px;
+
+  &-logo {
+    width: 144px;
+    height: 144px;
+    object-fit: contain;
+
+    @media (max-width: $media-queries-mobile) {
+      width: 99px;
+      height: 99px;
+    }
+  }
 
   &-link {
     text-decoration: none;
