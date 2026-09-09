@@ -65,6 +65,11 @@
     color: $primary-color;
   }
 
+  &-location-status {
+    font: 400 14px $font-text;
+    color: $primary-color;
+  }
+
   @media (max-width: $media-queries-mobile) {
     &-heading {
       align-items: flex-start;
