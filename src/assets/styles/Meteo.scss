@@ -20,11 +20,21 @@
 
 .meteo-image {
   display: inline-block;
-  max-width: 500px;
   width: 100%;
   height: auto;
-  margin-top: 14px;
   border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.meteo-visual {
+  display: inline-flex;
+  justify-content: center;
+  width: min(100%, 500px);
+  margin-top: 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .meteo-board {
