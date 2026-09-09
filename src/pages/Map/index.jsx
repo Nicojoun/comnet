@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { QRCodeSVG } from 'qrcode.react';
 import '../../assets/styles/Map.scss';
 
 function Map() {
@@ -30,9 +31,27 @@ function Map() {
     return `https://www.google.com/maps?output=embed&dirflg=d&saddr=${originParam}&daddr=${destinationParam}`;
   }, [origin, destination]);
 
+  const directionsUrl = useMemo(() => {
+    const originParam = encodeURIComponent(origin);
+    const destinationParam = encodeURIComponent(destination);
+    return `https://www.google.com/maps/dir/?api=1&origin=${originParam}&destination=${destinationParam}&travelmode=driving`;
+  }, [origin, destination]);
+
   return (
     <div className="map">
-      <h1 className="map-title">Itineraire</h1>
+      <div className="map-heading">
+        <h1 className="map-title">Itineraire</h1>
+        <div className="map-qr">
+          <QRCodeSVG
+            value={directionsUrl}
+            size={88}
+            level="M"
+            includeMargin
+            aria-label="QR code de l'itineraire Google Maps"
+          />
+          <span>Scanner pour ouvrir l&apos;itineraire</span>
+        </div>
+      </div>
       {geoError && <p className="map-error">{geoError}</p>}
       <div className="map-frame">
         <iframe

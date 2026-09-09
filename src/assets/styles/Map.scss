@@ -17,9 +17,31 @@
   &-title {
     font: 500 36px $font-text;
     color: blue;
+    margin: 0;
 
     @media (max-width: $media-queries-mobile) {
       font: 500 20px $font-text;
+    }
+  }
+
+  &-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &-qr {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font: 400 14px $font-text;
+    color: $primary-color;
+
+    svg {
+      flex: 0 0 auto;
+      background: white;
+      border-radius: 6px;
     }
   }
 
@@ -41,5 +63,25 @@
   &-error {
     font: 400 14px $font-text;
     color: $primary-color;
+  }
+
+  @media (max-width: $media-queries-mobile) {
+    &-heading {
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    &-qr {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+      font-size: 11px;
+      text-align: right;
+
+      svg {
+        width: 68px;
+        height: 68px;
+      }
+    }
   }
 }
