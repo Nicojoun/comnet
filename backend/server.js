@@ -16,9 +16,9 @@ const db = new sqlite3.Database(
   }
 );
 
-// route GET pour /user
+// Route GET pour les messages du forum.
 app.get("/user", (req, res) => {
-  db.all("SELECT * FROM user", [], (err, rows) => {
+  db.all("SELECT ID, Commentaire FROM commentaire", [], (err, rows) => {
     if (err) return res.status(500).json({ error: err.message });
     return res.json(rows);
   });
