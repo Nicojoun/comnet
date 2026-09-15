@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../assets/styles/Login.scss";
 
 function Login() {
+  const navigate = useNavigate();
   const [form, setForm] = useState({ login: "", password: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -15,7 +16,6 @@ function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setError("");
-    setSuccess("");
 
     if (!form.login.trim() || !form.password.trim()) {
       setError("Merci de renseigner le login et le mot de passe.");
@@ -40,7 +40,9 @@ function Login() {
         throw new Error(data.error || "Connexion impossible.");
       }
 
-      setSuccess(`Connexion reussie: ${data.user.login}`);
+      localStorage.setItem("comnet.user", JSON.stringify(data.user));
+      window.dispatchEvent(new Event("comnet-auth-change"));
+      navigate("/", { replace: true });
     } catch (err) {
       setError(err.message || "Erreur de connexion.");
     } finally {
@@ -86,7 +88,6 @@ function Login() {
         </button>
 
         {error && <p style={{ color: "#d33" }}>{error}</p>}
-        {success && <p style={{ color: "#188038" }}>{success}</p>}
       </form>
     </div>
   );

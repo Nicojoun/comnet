@@ -21,6 +21,7 @@
   }
 
   &-link {
+    border: none;
     text-decoration: none;
     color: white;
     background: blue;
@@ -28,9 +29,16 @@
     font-size: 24px;
     padding: 12px 24px;
     border-radius: 8px;
+    cursor: pointer;
 
     &:hover {
       opacity: 0.9;
     }
+  }
+
+  &-user-login {
+    color: blue;
+    font-size: 18px;
+    font-weight: 700;
   }
 }

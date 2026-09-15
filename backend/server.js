@@ -33,7 +33,7 @@ app.post("/login", (req, res) => {
   }
 
   db.get(
-    "SELECT login FROM user WHERE login = ? AND password = ?",
+    "SELECT rowid AS ID, login FROM user WHERE login = ? AND password = ?",
     [login, password],
     (err, row) => {
       if (err) return res.status(500).json({ error: err.message });
@@ -43,7 +43,7 @@ app.post("/login", (req, res) => {
 
       return res.json({
         success: true,
-        user: { login: row.login },
+        user: { ID: row.ID, login: row.login },
       });
     }
   );
