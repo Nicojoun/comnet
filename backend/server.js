@@ -18,10 +18,50 @@ const db = new sqlite3.Database(
 
 // Route GET pour les messages du forum.
 app.get("/user", (req, res) => {
-  db.all("SELECT ID, Commentaire FROM commentaire", [], (err, rows) => {
-    if (err) return res.status(500).json({ error: err.message });
-    return res.json(rows);
-  });
+  db.all(
+    `SELECT commentaire.ID, user.login, commentaire.Commentaire
+     FROM commentaire
+     LEFT JOIN user ON commentaire.ID = user.rowid`,
+    [],
+    (err, rows) => {
+      if (err) return res.status(500).json({ error: err.message });
+      return res.json(rows);
+    }
+  );
+});
+
+// Route POST pour ajouter un commentaire au forum.
+app.post("/commentaire", (req, res) => {
+  const { login, commentaire } = req.body;
+  const formattedComment =
+    typeof commentaire === "string" ? commentaire.trim() : "";
+
+  if (!login || !formattedComment) {
+    return res.status(400).json({ error: "Login et commentaire requis." });
+  }
+
+  db.get(
+    "SELECT rowid AS ID, login FROM user WHERE login = ?",
+    [login],
+    (err, user) => {
+      if (err) return res.status(500).json({ error: err.message });
+      if (!user) return res.status(401).json({ error: "Utilisateur invalide." });
+
+      db.run(
+        "INSERT INTO commentaire (ID, Commentaire) VALUES (?, ?)",
+        [user.ID, formattedComment],
+        (insertErr) => {
+          if (insertErr) return res.status(500).json({ error: insertErr.message });
+
+          return res.status(201).json({
+            ID: user.ID,
+            login: user.login,
+            Commentaire: formattedComment,
+          });
+        }
+      );
+    }
+  );
 });
 
 // route POST pour /login
